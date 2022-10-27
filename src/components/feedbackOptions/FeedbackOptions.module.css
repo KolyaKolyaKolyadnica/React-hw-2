@@ -1,0 +1,13 @@
+.container {
+  padding: 5px;
+}
+.btn {
+  background-color: #fff;
+  box-shadow: 3px 3px #000;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px;
+}
+.btn:hover {
+  cursor: pointer;
+}

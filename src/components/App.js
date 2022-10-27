@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import Statistics from './statistics/Statistics';
 import FeedbackOptions from './feedbackOptions/FeedbackOptions';
+import possibleFeedback from '../data/possibleFeedback.json';
 import Notification from './notification/Notification';
 import Section from './section/Section';
 
@@ -34,10 +35,26 @@ class App extends Component {
 
     return (
       <>
-        <div style={{ fontSize: 24 }}>Please leave feedback</div>
+        <Section title={'Please leave feedback'}>
+          <FeedbackOptions
+            options={possibleFeedback}
+            onLeaveFeedback={this.leaveFeedback}
+          />
+          {this.countTotalFeedback() > 0 ? (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message="There is no feedback" />
+          )}
+        </Section>
 
-        <FeedbackOptions
-          options={this.leaveFeedback}
+        {/* <FeedbackOptions
+          options={possibleFeedback}
           onLeaveFeedback={this.leaveFeedback}
         />
         {this.countTotalFeedback() > 0 ? (
@@ -49,10 +66,8 @@ class App extends Component {
             positivePercentage={this.countPositiveFeedbackPercentage()}
           />
         ) : (
-          <Notification message="There is no feedback"></Notification>
-        )}
-
-        <Section title=""></Section>
+          <Notification message="There is no feedback" />
+        )} */}
       </>
     );
   }

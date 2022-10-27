@@ -11,8 +11,9 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
             onClick={e => {
               onLeaveFeedback(e);
             }}
+            key={option.id}
           >
-            {option}
+            {option.name}
           </button>
         );
       })}

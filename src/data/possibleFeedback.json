@@ -1,1 +1,5 @@
-["Good","Neutral","Bad"]
+[
+{"id":"1","name":"Good"},
+{"id":"2","name":"Neutral"},
+{"id":"3","name":"Bad"}
+]

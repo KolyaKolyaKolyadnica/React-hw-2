@@ -52,22 +52,6 @@ class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-
-        {/* <FeedbackOptions
-          options={possibleFeedback}
-          onLeaveFeedback={this.leaveFeedback}
-        />
-        {this.countTotalFeedback() > 0 ? (
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
-          />
-        ) : (
-          <Notification message="There is no feedback" />
-        )} */}
       </>
     );
   }

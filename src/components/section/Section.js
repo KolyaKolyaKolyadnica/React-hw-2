@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 function Section({ title, children }) {
   return (
-    <>
-      <div style={{ fontSize: 24 }}>{title}</div>
+    <section>
+      <h1 style={{ margin: 0 }}>{title}</h1>
       {children}
-    </>
+    </section>
   );
 }
 export default Section;
